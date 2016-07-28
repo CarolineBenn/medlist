@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     collection { post :import }
   end
 
+  get "/:page" => "pages#show"
+
   root to: 'lists#index'
 
 end

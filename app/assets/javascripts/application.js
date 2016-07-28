@@ -24,7 +24,6 @@ $(document).ready(function(){
 
   $('input:file').change(function(){
     if ($(this).val()){
-      console.log('this is ', this)
       $(importButton).attr('disabled',false);
     } 
   });
