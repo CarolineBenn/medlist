@@ -14,15 +14,42 @@
  *= require_self
  */
 
-body {
+ body {
   background: #efefef;
 }
 
- .page-header {
-    background: #1A8FB9;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
+.pushy-menu {
+  background: #044963;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  h1 {
+    color: white;
+    font-size: 1.5em;
+  }
+
+  i {
+    color: white;
+    font-size: 1.5em;
+  }
+
+  .menu-btn {
+    float: none;
+    transform: translateY(-0%);
+    display: inline-block;
+  }
+  
+  .main-logo {
+    display: inline-block;
+  }
+}
+
+
+.page-header {
+  background: #1A8FB9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
 
   h1 {
     color: white;
