@@ -1,0 +1,65 @@
+<%= form_for(@list) do |f| %>
+  <% if @list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
+
+      <ul>
+      <% @list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :section %><br>
+    <%= f.text_field :section %>
+  </div>
+  <div class="field">
+    <%= f.label :list_name %><br>
+    <%= f.text_field :list_name %>
+  </div>
+  <div class="field">
+    <%= f.label :total %><br>
+    <%= f.number_field :total %>
+  </div>
+  <div class="field">
+    <%= f.label :africa %><br>
+    <%= f.number_field :africa %>
+  </div>
+  <div class="field">
+    <%= f.label :asia %><br>
+    <%= f.number_field :asia %>
+  </div>
+  <div class="field">
+    <%= f.label :aus_nz %><br>
+    <%= f.number_field :aus_nz %>
+  </div>
+  <div class="field">
+    <%= f.label :eastern_europe %><br>
+    <%= f.number_field :eastern_europe %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_east %><br>
+    <%= f.number_field :middle_east %>
+  </div>
+  <div class="field">
+    <%= f.label :south_america %><br>
+    <%= f.number_field :south_america %>
+  </div>
+  <div class="field">
+    <%= f.label :usa_can %><br>
+    <%= f.number_field :usa_can %>
+  </div>
+  <div class="field">
+    <%= f.label :united_kingdom %><br>
+    <%= f.number_field :united_kingdom %>
+  </div>
+  <div class="field">
+    <%= f.label :western_europe %><br>
+    <%= f.number_field :western_europe %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

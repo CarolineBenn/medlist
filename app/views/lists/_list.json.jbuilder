@@ -1,0 +1,2 @@
+json.extract! list, :id, :section, :list_name, :total, :africa, :asia, :aus_nz, :eastern_europe, :middle_east, :south_america, :usa_can, :united_kingdom, :western_europe, :created_at, :updated_at
+json.url list_url(list, format: :json)

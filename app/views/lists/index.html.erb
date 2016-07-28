@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lists</h1>
+
+ <p>Upload New List:</p>
+
+ <%= form_tag import_lists_path, multipart: true do %>
+ <%= file_field_tag :file %>
+ <%= submit_tag "Import" %>
+ <% end %>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>List name</th>
+      <th>Total</th>
+      <th>Africa</th>
+      <th>Asia</th>
+      <th>Aus nz</th>
+      <th>Eastern europe</th>
+      <th>Middle east</th>
+      <th>South america</th>
+      <th>Usa can</th>
+      <th>United kingdom</th>
+      <th>Western europe</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lists.each do |list| %>
+      <tr>
+        <td><%= list.section %></td>
+        <td><%= list.list_name %></td>
+        <td><%= list.total %></td>
+        <td><%= list.africa %></td>
+        <td><%= list.asia %></td>
+        <td><%= list.aus_nz %></td>
+        <td><%= list.eastern_europe %></td>
+        <td><%= list.middle_east %></td>
+        <td><%= list.south_america %></td>
+        <td><%= list.usa_can %></td>
+        <td><%= list.united_kingdom %></td>
+        <td><%= list.western_europe %></td>
+        <td><%= link_to 'Show', list %></td>
+        <td><%= link_to 'Edit', edit_list_path(list) %></td>
+        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New List', new_list_path %>
