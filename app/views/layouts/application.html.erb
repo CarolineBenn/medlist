@@ -3,12 +3,13 @@
 <head>
   <title>Medlist</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script src="https://use.fontawesome.com/81742820d0.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<%= render "partials/header" %>
 <%= yield %>
-
 </body>
 </html>
