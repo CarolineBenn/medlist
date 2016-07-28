@@ -1,8 +1,8 @@
 class CreateLists < ActiveRecord::Migration
   def change
     create_table :lists do |t|
-      t.string :section
-      t.string :list_name
+      t.string  :section
+      t.string  :list_name
       t.integer :total
       t.integer :africa
       t.integer :asia
