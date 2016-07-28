@@ -1,6 +1,11 @@
 require 'csv'
 
+
 class List < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :list_name, use: :slugged
+
+
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
       csv << column_names
@@ -9,7 +14,6 @@ class List < ActiveRecord::Base
       end
     end
   end
-
 
   def self.import(csv_file)
       line = 0
