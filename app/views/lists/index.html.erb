@@ -5,8 +5,8 @@
  <p>Upload New List:</p>
 
  <%= form_tag import_lists_path, multipart: true do %>
- <%= file_field_tag :file %>
- <%= submit_tag "Import" %>
+ <%= file_field_tag :file, accept: 'text/csv' %>
+ <%= submit_tag "Import", id: "import" %>
  <% end %>
 
 

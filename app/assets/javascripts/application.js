@@ -14,3 +14,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+
+  var importButton = $('input#import');
+  $(importButton).attr('disabled', true);
+
+
+  $('input:file').change(function(){
+    if ($(this).val()){
+      console.log('this is ', this)
+      $(importButton).attr('disabled',false);
+    } 
+  });
+
+});
