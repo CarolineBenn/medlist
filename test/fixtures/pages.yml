@@ -2,6 +2,10 @@
 
 one:
   title: MyString
+  primary_content: MyText
+  secondary_content: MyText
 
 two:
   title: MyString
+  primary_content: MyText
+  secondary_content: MyText

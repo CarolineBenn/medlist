@@ -1,66 +1,110 @@
+<div class="page-header">
+  <h1><%= @list.list_name %></h1>
+</div>
 <p id="notice"><%= notice %></p>
 
-<%= @list.inspect %>
 
-<p>
-  <strong>Section:</strong>
-  <%= @list.section %>
-</p>
+<table>
 
-<p>
-  <strong>List name:</strong>
-  <%= @list.list_name %>
-</p>
+  <thead>
+    <span>Email</span>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <span>Africa</span>
+    </td>
+    <td>
+      <%= @list.africa %>
+    </td>
+  </tr>
 
-<p>
-  <strong>Total:</strong>
-  <%= @list.total %>
-</p>
+  <tr>
+    <td>
+      <span>Asia</span>
+    </td>
+    <td>
+      <%= @list.asia %>
+    </td>
+  </tr>
 
-<p>
-  <strong>Africa:</strong>
-  <%= @list.africa %>
-</p>
+  <tr>
+    <td>
+      <span>Australia/NZ</span>
+    </td>
+    <td>
+      <%= @list.aus_nz %>
+    </td>
+  </tr>
 
-<p>
-  <strong>Asia:</strong>
-  <%= @list.asia %>
-</p>
+  <tr>
+    <td>
+      <span>Eastern Europe</span>
+    </td>
+    <td>
+      <%= @list.eastern_europe %>
+    </td>
+  </tr>
 
-<p>
-  <strong>Aus nz:</strong>
-  <%= @list.aus_nz %>
-</p>
+  <tr>
+    <td>
+      <span>Middle East</span>
+    </td>
+    <td>
+      <%= @list.middle_east %>
+    </td>
+  </tr>
 
-<p>
-  <strong>Eastern europe:</strong>
-  <%= @list.eastern_europe %>
-</p>
+  <tr>
+    <td>
+      <span>South America</span>
+    </td>
+    <td>
+      <%= @list.south_america %>
+    </td>
+  </tr>
 
-<p>
-  <strong>Middle east:</strong>
-  <%= @list.middle_east %>
-</p>
+  <tr>
+    <td>
+      <span>USA / Canada</span>
+    </td>
+    <td>
+      <%= @list.usa_can %>
+    </td>
+  </tr>
 
-<p>
-  <strong>South america:</strong>
-  <%= @list.south_america %>
-</p>
+  <tr>
+    <td>
+      <span>United Kingdom</span>
+    </td>
+    <td>
+      <%= @list.united_kingdom %>
+    </td>
+  </tr>
 
-<p>
-  <strong>Usa can:</strong>
-  <%= @list.usa_can %>
-</p>
+  <tr>
+    <td>
+      <span>Western Europe</span>
+    </td>
+    <td>
+      <%= @list.western_europe %>
+    </td>
+  </tr>
 
-<p>
-  <strong>United kingdom:</strong>
-  <%= @list.united_kingdom %>
-</p>
+  <tr class="total">
+    <td>
+      <span>Total</span>
+    </td>
+    <td>
+      <%= @list.total %>
+    </td>
+  </tr>
 
-<p>
-  <strong>Western europe:</strong>
-  <%= @list.western_europe %>
-</p>
+  </tbody>
+</table>
+
+
+
 
 <%= link_to 'Edit', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>

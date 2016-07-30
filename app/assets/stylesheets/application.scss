@@ -18,6 +18,11 @@
   background: #efefef;
 }
 
+footer {
+  margin-top: 3em;
+  background: #333;
+}
+
 .pushy-menu {
   background: #044963;
   padding-top: 1em;
@@ -38,7 +43,7 @@
     transform: translateY(-0%);
     display: inline-block;
   }
-  
+
   .main-logo {
     display: inline-block;
   }
@@ -50,6 +55,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+  margin-bottom: 2em;
 
   h1 {
     color: white;
