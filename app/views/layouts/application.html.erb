@@ -10,6 +10,12 @@
 <body>
 
   <%= render "partials/header" %>
+
+  <% if current_user %>
+    <%= render "partials/admin_bar" %>
+  <% end %>
+    <!-- <p class="notice"><%= notice %></p> -->
+     <!-- <p class="alert"><%= alert %></p> -->
   <%= yield %>
   <%= render "partials/footer" %>
 

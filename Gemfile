@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'friendly_id', '~> 5.1.0'
+gem 'devise'
 
 
 gem 'rails', '4.2.6'

@@ -22,7 +22,9 @@ class List < ActiveRecord::Base
       CSV.foreach(csv_file.path, headers: true) do |row|
         list = List.find_or_initialize_by(list_name: row["list_name"])
         list.assign_attributes(row.to_hash)
+
         if list.valid?
+          self.define_category(list)
           list.save!
         else
           errors << line
@@ -31,6 +33,20 @@ class List < ActiveRecord::Base
       end
       return errors
     end
+
+
+    def self.define_category(list)
+      if list.section == "E-MED"
+        list.category = "medical-and-health-care"
+      elsif list.section == "E-BIOL"
+        list.category = "biology-and-life-sciences"
+      elsif list.section == "E-ENGN"
+        list.category = "engineering-science-and-tech"
+      else
+        list.category = "uncategorised"
+      end
+    end
+
 
 =begin
   ## WORKING BUT DODGY :-/

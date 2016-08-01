@@ -21,6 +21,14 @@
 footer {
   margin-top: 3em;
   background: #333;
+
+  a {
+    color: white
+  }
+}
+
+.one-hundred {
+  width: 100%;
 }
 
 .pushy-menu {
@@ -57,10 +65,28 @@ footer {
   text-align: center;
   margin-bottom: 2em;
 
-  h1 {
+  h1, h2 {
     color: white;
     text-transform: uppercase;
     font-weight: bold;
   }
 
+}
+
+#admin-bar {
+  background: #0C678A;
+  padding: 1em 0;
+
+  &.row {
+    max-width: 100%;
+  }
+
+  .medium-12.columns {
+    // max-width: 62.5rem; // Need to center this
+  }
+
+  a {
+    color: white;
+    float: right;
+  }
 }
